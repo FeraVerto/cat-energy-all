@@ -1,0 +1,132 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+@import "modules/header/header";
+@import "modules/categories/categories";
+@import "modules/advantages.scss";
+@import "modules/example.scss";
+@import "modules/contacts.scss";
+@import "modules/footer.scss";
+@import "modules/header/media-header";
+@import "modules/categories/media-categories";
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+	font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+a { text-decoration: none; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+section, .section {
+  position: relative;
+  padding: 80px 0 0 0;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #444444;
+  font-family: "Arial";
+  @media screen and (max-width: $desktopWidth) {
+    padding: 36px 0;
+  }
+  @media screen and (max-width: $desktopWidth) {
+    padding: 28px 0;
+  }
+  @media screen and (max-width: $desktopWidth) {
+    padding: 20px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1440px;
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: smPhoneWidth;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.button {
+  padding: 15px 25px;
+  background-color: #68b738;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  line-height: 25px;
+
+  display: inline-block;
+
+  /*font: inherit;
+  background-color: #81b3d2;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;*/
+}
+
+
+
+
+
+
+//Slider
+
+
+// Modules
+// @import "modules/my-module.scss";

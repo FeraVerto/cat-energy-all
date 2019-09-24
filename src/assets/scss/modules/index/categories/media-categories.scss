@@ -1,0 +1,296 @@
+
+//Экран до 1440px
+
+@media screen and (max-width: $desktopWidth) {
+  html {
+    font-size: 16px;
+  }
+
+  .categories__item {
+    margin-right: 30px;
+    max-width: 100%;
+  }
+}
+
+//Экран менее 1440px
+
+@media screen and (max-width: $smDesktopWidth) {
+  html {
+    font-size: 16px;
+  }
+
+  .categories__list {
+    flex-direction: column;
+  }
+
+  .categories {
+    margin-top: 0;
+  }
+
+  .categories__item {
+    width: 100%;
+  }
+
+  .categories__item--position {
+    padding-bottom: 65px;
+    padding-top: 80px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .categories__item--position:last-child {
+    padding-bottom: 60px;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+
+  .categories__item-image {
+    position: absolute;
+    right: 30px;
+    top: 100px;
+
+    width: 270px;
+    height: 215px;
+  }
+
+  .categories__item-image::after {
+    height: 200px;
+    width: 200px;
+  }
+
+  .categories__item-image--position-1 {
+    top: -10px;
+    left: 70px;
+
+    width: 140px;
+    height: 194px;
+  }
+
+  .categories__item-image--position-2 {
+    top: 40px;
+    left: 0px;
+
+    width: 268px;
+    height: 112px;
+  }
+
+  .categories__item-h3 {
+    margin: 0;
+  }
+
+  .categories__item-text {
+    margin: 0;
+    padding: 0;
+    margin-top: 35px;
+    margin-bottom: 60px;
+
+    max-width: 370px;
+  }
+
+}
+
+//Экран для планшета
+
+@media screen and (max-width: $tableWidth) {
+  html {
+    font-size: 15px;
+  }
+
+  .categories {
+    padding-top: 0;
+  }
+
+  .categories__list {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .categories__item {
+    max-width: 100%;
+  }
+
+  .categories__item--position {
+    padding-bottom: 65px;
+    padding-top: 80px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .categories__item--position:last-child {
+    margin-bottom: 0;
+    padding-bottom: 60px;
+  }
+
+  .categories__item-image {
+    position: absolute;
+    right: 30px;
+    top: 100px;
+
+    width: 270px;
+    height: 215px;
+  }
+
+  .categories__item-image::after {
+    height: 200px;
+    width: 200px;
+  }
+
+  .categories__item-image--position-1 {
+    top: -10px;
+    left: 70px;
+
+    width: 140px;
+    height: 194px;
+  }
+
+  .categories__item-image--position-2 {
+    top: 40px;
+    left: 0px;
+
+    width: 268px;
+    height: 112px;
+  }
+
+  .categories__item-h3 {
+    margin: 0;
+  }
+
+  .categories__item-text {
+    margin: 0;
+    padding: 0;
+    margin-top: 35px;
+    margin-bottom: 60px;
+
+    max-width: 370px;
+  }
+}
+
+//Экран для телефона
+
+@media screen and (max-width: $phoneWidth) {
+  html {
+    font-size: 14px;
+  }
+
+  .categories {
+    margin-top: 22px;
+  }
+
+  .container {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .categories__item {
+    max-width: 100%;
+  }
+
+  .categories__item--position {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .categories__item--position:first-child {
+    margin-top: 0;
+  }
+
+  .categories__item--position:last-child {
+    margin-top: 20px;
+  }
+
+  .categories__item-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 150px;
+    height: 150px;
+  }
+
+  .categories__item-image::after {
+    content: '';
+
+    position: absolute;
+    left: 23px;
+    top: 24px;
+    z-index: -1;
+
+    height: 51px;
+    width: 51px;
+
+    background-color: #68b738;
+    border-radius: 50%;
+  }
+
+  .categories__item-image--position-1 {
+    position: absolute;
+    top: 24px;
+    left: 33px;
+
+    width: 35px;
+    height: 49px;
+  }
+
+  .categories__item-image--position-2 {
+    position: absolute;
+    top: 34px;
+    left: 12px;
+
+    width: 67px;
+    height: 28px;
+  }
+
+  .categories__item-text {
+    padding: 0;
+    margin-top: 36px;
+    margin-left: 20px;
+    margin-right: 35px;
+    margin-bottom: 25px;
+
+    min-width: 230px;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #444444;
+    font-family: "Arial";
+  }
+
+  .categories__item-h3 {
+    margin: 0;
+    padding: 0;
+    margin-left: 29%;
+    margin-top: 30px;
+
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+    font-family: "Oswald";
+    font-weight: 400;
+  }
+
+  .categories__item--position:last-child {
+    padding-bottom: 0;
+  }
+
+  .categories__item-link {
+    margin-left: 20px;
+
+    font-size: 16px;
+    line-height: 16px;
+    color: #111111;
+    font-family: "Oswald";
+    font-weight: 400;
+  }
+
+  .categories__item-link-border {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    width: 100%;
+
+    border-top: 1px solid #d9d9d9;
+    display: block;
+  }
+}

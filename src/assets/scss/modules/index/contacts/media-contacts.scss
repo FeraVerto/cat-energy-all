@@ -1,0 +1,77 @@
+@media screen and (max-width: $desktopWidth) {
+  html {
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+
+  .contacts-card {
+    padding: 70px 73px;
+
+    width: 100%;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contacts-card__adress {
+    text-transform: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: #444444;
+    font-family: "Arial";
+    text-align: right;
+  }
+
+}
+
+@media screen and (max-width: $tableWidth) {
+
+}
+
+
+@media screen and (max-width: $phoneWidth) {
+  html {
+    font-size: 14px;
+  }
+
+  .contacts-card {
+    padding: 32px 0;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contacts-card__welcome {
+    margin-right: 10px;
+    width: 50%;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .contacts-card__adress {
+    padding: 0;
+    margin: 0;
+
+    width: 50%;
+
+    font-size: 14px;
+    line-height: 20px;
+
+    text-align: left;
+  }
+
+  .contacts-card__adress span {
+    margin-top: 0;
+  }
+
+}

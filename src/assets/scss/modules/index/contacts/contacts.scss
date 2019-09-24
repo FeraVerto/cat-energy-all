@@ -1,0 +1,57 @@
+
+.contacts {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  position: relative;
+}
+
+.contacts-card {
+  padding: 70px 79px;
+
+  width: 570px;
+
+  position: absolute;
+  top: 90px;
+
+  display: flex;
+  align-items: center;
+  
+  background-color: #ffffff;
+  color: #111111;
+  font-family: "Oswald";
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.contacts-card__welcome {
+  width: 150px;
+
+  font-size: 20px;
+  line-height: 25px;
+  color: #111111;
+  font-family: "Oswald";
+  font-weight: 400;
+}
+
+.contacts-card__adress {
+  margin-left: 80px;
+
+  width: 158px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  font-family: "Arial";
+  text-transform: none;
+}
+
+.contacts-card__adress span {
+  margin-top: 25px;
+
+  display: block;
+}
+
+.image-map {
+  position: absolute;
+}
