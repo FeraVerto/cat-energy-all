@@ -9,9 +9,14 @@
   @return $pixels / $context * 1rem;
 }
 
-@mixin size($width,$height: $width) {
+@mixin size($width, $height) {
   width: $width;
   height: $height;
+}
+
+@mixin fonts($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
 }
 
 @mixin placeholder {

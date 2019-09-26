@@ -1,14 +1,5 @@
-@media screen and (max-width: $desktopWidth) {
-  html {
-    font-size: 16px;
-  }
-}
 
 @media screen and (max-width: $smDesktopWidth) {
-  html {
-    font-size: 16px;
-  }
-
   .page-header {
     height: 100vh;
   }
@@ -18,11 +9,6 @@
     padding: 0;
     margin-right: 35px;
     margin-left: 30px;
-  }
-
-  .main-nav {
-    margin: 0;
-    padding: 0;
   }
 
   .page-header__top {
@@ -36,8 +22,8 @@
   }
 
   .main-nav--position {
-    margin-right: 0;
     margin-top: 10px;
+    margin-right: 0;
   }
 
   .page-header__logo--position {
@@ -45,15 +31,15 @@
   }
 
   .site-list__item {
-    margin: 0;
-    padding: 0;
-    margin-right: 35px;
+    margin-bottom: 0;
 
     width: auto;
+
+    @include fonts(18px, 25px);
   }
 
   .site-list__item a {
-    color: $inner-color;
+    color: $primary-color-inner;
   }
 
   .site-list__item--active {
@@ -87,24 +73,47 @@
     padding: 0;
   }
 
+  //стили страницы index-catalog.html
+
+  .page-header--height {
+    height: auto;
+  }
+
 }
 
 @media screen and (max-width: $tableWidth) {
-  html {
-    font-size: 15px;
-  }
 
   .page-header__logo-mobile {
     display: none;
   }
 
+  .header-image-cat {
+    display: none;
+  }
+
+  .page-header__background-image-cat {
+    display: none;
+  }
+
+  .page-header__background-image-eat--center {
+    display: none;
+  }
+
   .page-header {
+    height: 955px;
+  }
+
+  .page-header_background-image-eat--table {
     background-image:url('/assets/img/index-can.png');
     background-repeat:no-repeat;
     background-position: center 415px;
-    background-size: 570px auto;
+    background-size: 563px auto;
 
-    height: 950px;
+    @include size (100%, 955px);
+
+    position: absolute;
+
+    z-index: -1;
   }
 
   .page-header__top {
@@ -139,9 +148,7 @@
   }
 
   .main-nav__list {
-    flex-wrap: wrap;
     width: auto;
-
   }
 
   .site-list {
@@ -151,36 +158,23 @@
 
   .site-list__item {
     margin-right: 36px;
-    margin-left: 0;
-
-    line-height: 26px;
+    margin-left: 0; 
+  
+    white-space: nowrap;
   }
 
   .site-list__item:last-child {
     margin-right: 0;
   }
 
-  .site-list__item  a{
-    color: #222;
-    font-size: 18px;
-    line-height: 25px;
-    white-space: nowrap;
+  .site-list__item--active-inner {
+    padding-bottom: 10px;
+    border-bottom: 2px solid $secondary-color;
   }
 
-  .header-image-cat {
-    display: none;
-  }
-
-  .page-header__background-image-cat {
-    display: none;
-  }
 
   .page-header__background-image-eat {
     width: 600px;
-  }
-
-  .page-header__background-image-eat--center {
-    display: none;
   }
 
   .page-header__info {
@@ -189,30 +183,32 @@
 
   .page-header__info-h1 {
     width: 420px;
+  }
 
-    font-size: 60px;
-    line-height: 60px;
+  //стили страницы index-catalog.html
+
+  .page-header--height {
+    height: auto;
   }
 }
 
 
 @media screen and (max-width: $phoneWidth) {
-  html {
-    font-size: 14px;
-  }
 
-  .page-header {
-    background-image: none;
-    height: 100%;
+  .page-header_background-image-eat--table {
+    display: none;
   }
 
   .page-header__logo {
     display: none;
   }
 
+  .page-header {
+    height: auto;
+  }
+
   .page-header__logo-mobile {
-    width: 32px;
-    height: 38px;
+    @include size(32px, 38px);
 
     display: block;
 
@@ -222,10 +218,9 @@
   }
 
   .logo-cat-energy {
-    display: block;
+    @include size(100px, 18px);
 
-    width: 100px;
-    height: 18px;
+    display: block;
 
     background-image: url('/assets/img/logo-cat-energy-2.svg');
     background-repeat: no-repeat;
@@ -242,23 +237,34 @@
   }
 
   .page-header_top-panel-mobile {
+    padding-bottom: 16px;
+
     width: 100%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    border-bottom: 1px solid $border-menu;
   }
 
   .page-header_top-panel-mobile--position {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 12px;
-    margin-bottom: 12px;
+  }
+
+  .visually-hidden--mobile {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
   }
 
   .main-nav {
-    width: 100%;
-    height: 100%;
+    
+    @include size(100%, 100%);
   }
 
   .main-nav--position {
@@ -270,14 +276,12 @@
     margin: 0;
     padding: 0;
 
-    width: 100%;
-    height: 100%;
+    @include size(100%, 100%);
 
     display: flex;
     flex-direction: column;
 
-    font-size: 20px;
-    line-height: 20px;
+    @include fonts(20px, 20px);
     color: $primary-color;
     font-weight: 500;
   }
@@ -286,8 +290,7 @@
     padding: 25px 0;
     margin-left: 0;
 
-    width: 100%;
-    height: 100%;
+    @include size(100%, 100%);
 
     text-align: center;
     border-top: 1px solid lightgray;
@@ -311,8 +314,7 @@
     position: absolute;
     z-index: 1;
 
-    width: 5px;
-    height: 5px;
+    @include size(5px, 5px);
 
     display: flex;
 
@@ -324,10 +326,10 @@
   .checkbox-line {
     margin-bottom: 6px;
 
-    width: 24px;
-    height: 2px;
+    @include size(24px, 2px);
 
-    background: $inner-color;
+    background: $toggle-color;
+
     border-radius: 4px;
     -webkit-transition: all .5s cubic-bezier(.08,.81,.87,.71);
     -moz-transition: all .5s cubic-bezier(.08,.81,.87,.71);
@@ -345,21 +347,24 @@
     margin-bottom: 0;
   }
 
+  .checkbox-line {
+    background-color: $toggle-color;
+  }
+
   .checkbox:checked ~ .checkbox-line--animate-1 {
-    background-color: $inner-color;
-    transform: rotate(45deg) translate(8px);
+    transform: rotate(45deg) translate(4px);
   }
+
   .checkbox:checked ~ .checkbox-line--animate-2 {
-    background-color: $inner-color;
-    transform: rotate(495deg) translate(4px);
+    transform: rotate(495deg) translate(0px);
   }
+
   .checkbox:checked ~ .checkbox-line--animate-3 {
-    background-color: $inner-color;
     transform: rotate(45deg);
     opacity: 0;
   }
 
-  .header-image-cat {
+  .header__image-cat-mobile {
     display: block;
 
     position: absolute;
@@ -379,11 +384,10 @@
     margin: 30px auto auto 0;
     z-index: -1;
 
-    width: 100%;
-    height: 100%;
+    @include size(100%, 450px);
 
     text-align: center;
-    color: $default-color;
+    color: $inner-color;
   }
 
   .page-header__info-h1 {
@@ -391,37 +395,37 @@
 
     width: 100%;
 
-    font-size: 36px;
-    line-height: 36px;
-    color: $default-color;
+    @include fonts (36px, 36px);
+    color: $inner-color;
   }
 
   .page-header__info-image-mobile {
+    margin: 0 auto;
+    margin-top: 30px;
+
+    @include size(235px, 260px);
+
     display: block;
 
     background-image: url('/assets/img/index-can.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-
-    width: 235px;
-    height: 260px;
-
-    margin: 0 auto;
-    margin-top: 30px;
   }
 
   .page-header__info-text {
-    font-size: 14px;
-    line-height: 14px;
+    @include fonts (14px, 14px);
     width: 100%;
   }
 
-  .page-header__button {
-    margin-top: 0;
-    width: 100%;
+  //Длч страницы index-catalog.html
+
+  .site-list__item--active-inner {
+    border-bottom: none;
   }
 
-
+  .site-list__item:last-child {
+    border-bottom: 1px solid lightgrey;
+  }
 
 }

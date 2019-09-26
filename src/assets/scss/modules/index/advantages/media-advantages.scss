@@ -1,48 +1,12 @@
 
-//Экран до 1440px
-
-@media screen and (max-width: $desktopWidth) {
-  html {
-    font-size: 16px;
-  }
-
-  .advantages {
-    margin-top: 0;
-  }
-
-}
-
-//Экран менее 1440px
-
 @media screen and (max-width: $smDesktopWidth) {
-  html {
-    font-size: 16px;
-  }
-
-  .advantages {
-    margin-top: 55px;
-  }
-
-  .advantages-list {
-    justify-content: space-between;
-  }
 
   .advantages-item {
     margin-right: 40px;
   }
-
-  .advantages-h2 {
-    font-size: 60px;
-    line-height: 60px;
-  }
 }
 
-//Экран для планшета
-
 @media screen and (max-width: $tableWidth) {
-  html {
-    font-size: 15px;
-  }
 
   .advantages-list {
     margin-right: 80px;
@@ -54,13 +18,7 @@
 
 }
 
-//Экран для телефона
-
 @media screen and (max-width: $phoneWidth) {
-  html {
-    font-size: 14px;
-  }
-
   .advantages {
     margin-top: 35px;
   }
@@ -76,11 +34,8 @@
   }
 
   .advantages-h2 {
-    margin-top: 0;
+    //margin-top: 35px;
     margin-bottom: 35px;
-
-    font-size: 36px;
-    line-height: 60px;
   }
 
   .advantages-item {
@@ -90,9 +45,13 @@
 
     width: 100%;
   }
+
+  .advantages-item:last-child {
+    margin-bottom: 0;
+  }
+
   .advantages-item__icon {
-    width: 60px;
-    height: 60px;
+    @include size(60px, 60px);
   }
 
   .advantages-item__icon img {
@@ -102,8 +61,7 @@
     margin-top: 15px;
     margin-right: 40px;
 
-    width: 32px;
-    height: 32px;
+    @include size(32px, 32px);
   }
 
   .advantages-item__icon::after {
@@ -112,8 +70,7 @@
 
     top: 0;
 
-    width: 60px;
-    height: 60px;
+    @include size(60px, 60px);
   }
 
   .advantages-item__text {
@@ -121,11 +78,8 @@
     padding: 0;
 
     width: 100%;
-
-    font-size: 14px;
-    line-height: 18px;
-    color: #444444;
-    font-family: "Arial";
+    
+    color: $text-color;
+    font-family: $secondaryFont;
   }
-
 }

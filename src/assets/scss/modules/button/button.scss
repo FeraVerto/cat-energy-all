@@ -1,0 +1,76 @@
+
+.button {
+  padding: 15px 25px;
+
+  width: 100%;
+
+  @include fonts(20px, 20px);
+
+  background-color: $secondary-color;
+  color: $inner-color;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+
+  display: inline-block;
+
+  font-family: $mainFont;
+}
+
+.button:hover {
+  background-color: $focus-color;
+}
+
+.button:active {
+  background-color: $focus-color;
+} 
+
+.button a:active {
+  opacity: 0.3;
+}
+
+.button span:active {
+  opacity: 0.3;
+}
+
+.button--color:hover {
+  background-color: $active-color;
+}
+
+.catalog-item .button--size {
+  padding: 13px 0;
+
+  @include fonts(16px, 20px);
+}
+
+.button--color {
+  background-color: $main-color;
+}
+
+.button--color a {
+  color: $text-color;
+}
+
+.page-header__button {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.table-button--position {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+.container-button {
+  margin: 0;
+
+  max-width: 250px;
+
+  flex: 0 0 auto;
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

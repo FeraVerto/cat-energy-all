@@ -3,7 +3,7 @@
 
   width: 100%;
 
-  background-color: #f2f2f2;
+  background-color: $main-color;
 }
 
 .example {
@@ -13,7 +13,7 @@
 }
 
 .example-block {
-  background-color: #f2f2f2;
+  background-color: $main-color;
 }
 
 .example-wrapper {
@@ -34,11 +34,38 @@
 }
 
 .example-image {
-  height: 0;
-
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  width: 690px; 
+  height: 536px;
+  margin-top: -40px;
 }
+
+.example-image--cat {
+  width: 100%;
+}
+
+.example-image--cat-1 {
+  position: absolute;
+  width: 660px; 
+  height: 536px;
+
+}
+
+.example-image--cat-2 {
+  position: absolute;
+  width: 590px; 
+  height: auto;
+
+  bottom: 0px;
+  
+  margin-left: 70px;
+}
+
+.slider {
+  position: absolute;
+  bottom: -60px;
+}
+
 
 .example-image--position {
   position: relative;
@@ -48,12 +75,12 @@
 
 .slider {
   margin-top: 40px;
+  margin-left: 150px;
 }
 
 //Переделать!!!
 .slider {
-  width: 425px;
-  height: 7px;
+  @include size(425px, 7px);
 
   -webkit-appearance: none;
 
@@ -61,8 +88,8 @@
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 .example-calculation {
@@ -84,28 +111,26 @@
 .example-calculation-fieldset {
   width: 163px;
 
+  @include fonts(30px, 37px);
+
   text-align: center;
   transform: rotate(180deg);
-  font-size: 30px;
-  line-height: 37px;
   border-radius: 3px;
-  background-color: rgba(255,255,255,0);
-  border: 1px solid #cdcdcd;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid $border-base;
 }
 
 .example-calculation__legend {
   padding: 0 9px;
 
-  font-size: 14px;
-  line-height: 14px;
+  @include fonts(14px, 14px);
   transform: rotate(180deg);
 }
 
 .example-calculation__text,
 .example-calculation__expenses {
-  color: #111111;
-  font-family: "Oswald";
-  font-weight: 400;
+  color: $primary-color;
+  font-family: $mainFont;
   text-transform: uppercase;
 }
 
@@ -118,8 +143,7 @@
 .example-calculation__expenses {
   padding-top: 60px;
 
-  font-size: 20px;
-  line-height: 20px;
+  @include fonts(20px, 20px);
 }
 
 .example-calculation__expenses-sum {

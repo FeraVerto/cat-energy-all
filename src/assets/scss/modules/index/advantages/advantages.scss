@@ -1,16 +1,10 @@
 .advantages {
-  padding-top: 0;
+  margin-top: 0;
 }
 
 .advantages-h2,
 .example-h2 {
   margin: 0 0 75px 0;
-
-  font-size: 60px;
-  line-height: 60px;
-  color: #111111;
-  font-family: "Oswald";
-  font-weight: 400;
 }
 
 .advantages-h2 {
@@ -50,10 +44,9 @@
   position: absolute;
   z-index: -1;
 
-  width: 80px;
-  height: 80px;
+  @include size(80px, 80px);
 
-  background-color: #68b738;
+  background-color: $secondary-color;
 }
 
 .advantages-item__background-number {
@@ -62,11 +55,9 @@
   top: -40px;
   z-index: -1;
 
-  font-size: 281px;
-  line-height: 281px;
-  color: #f2f2f2;
-  font-family: "Oswald";
-  font-weight: 400;
+  @include fonts(281px, 281px);
+  color: $main-color;
+  font-family: $mainFont;
 }
 
 .advantages-item__text {

@@ -17,25 +17,20 @@
 }
 
 .page-header {
-  height: 100vh;
-  width: 100%;
+  @include size (100%, 100vh);
 
+  @include fonts (20px, 25px);
   font-family: $mainFont;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 400;
-  line-height: 25px;
+  color: $primary-color;
 }
 
 .page-header__background-image-cat {
-  width: 50%;
-  height: 100vh;
+  @include size (50%, 100vh);
 
   z-index: -2;
   background-image: url("/assets/img/Background-cat-desktop.jpeg");
   background-position: 50% 100%;
   background-size: cover;
-
 }
 
 .page-header__background-image-cat--left {
@@ -61,8 +56,7 @@
 }
 
 .page-header__logo {
-  width: 202px;
-  height: 59px;
+  @include size (202px, 59px);
 }
 
 .page-header__logo--position {
@@ -78,14 +72,13 @@
   opacity: 0.6;
 }
 
-
 .main-nav {
   width: auto;
 }
 
 .main-nav--position {
-  margin-right: 75px;
   margin-top: 73px;
+  margin-right: 75px;
 }
 
 .main-nav__list {
@@ -96,11 +89,12 @@
 
 .site-list__item {
   margin-right: 35px;
-  margin-bottom: 15px;
+  margin-bottom: 15px;  
+  text-transform: uppercase;
 }
 
 .site-list__item a {
-  color: $default-color;
+  color: $inner-color;
 }
 
 .site-list__item a:hover {
@@ -113,7 +107,12 @@
 
 .site-list__item--active {
   padding-bottom: 10px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid $inner-color;
+}
+
+.site-list__item--active-inner {
+  padding-bottom: 10px;
+  border-bottom: 2px solid $secondary-color;
 }
 
 .page-header__info {
@@ -124,8 +123,7 @@
 .page-header__info-h1 {
   width: 420px;
 
-  font-size: 60px;
-  line-height: 60px;
+  @include fonts (60px, 60px);
   color: $primary-color;
   text-transform: none;
 }
@@ -134,15 +132,26 @@
   margin-top: 40px;
 
   width: 420px;
+
+  text-transform: uppercase;
 }
 
-.page-header__button {
-  margin-top: 50px;
-}
-
-.page-header__button a:active {
+/*.page-header__button a:active {
   opacity: 0.3;
+}*/
+
+//стили страницы index-catalog.html
+
+.site-list__item--catalog a{
+  color: $primary-color;
 }
 
+.page-header__catalog {
+  height: auto;
+}
+
+.page-header--height {
+  height: auto;
+}
 
 

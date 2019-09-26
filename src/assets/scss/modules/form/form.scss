@@ -1,0 +1,246 @@
+.form {
+  margin: 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 0;
+
+  @include fonts(20px, 20px);
+  color: $primary-color-inner;
+  font-family: $mainFont;
+  text-transform: uppercase;
+}
+
+.form-section {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.form__h1 {
+  margin-bottom: 50px;
+  text-transform: none;
+}
+
+.form__text {
+  margin-bottom: 70px;
+
+  @include fonts(20px, 30px);
+}
+
+.form-selection__flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-selection__item {
+  width: 570px;
+}
+
+.form-selection__item:first-child {
+  margin-right: 80px;
+}
+
+.form-selection__item p {
+  display: table;
+  width: 100%;
+}
+
+.form-selection__item label,
+.form-selection__item input {
+  display: table-cell;
+}
+
+.form-selection__item label {
+  width: 1%;
+  white-space: nowrap;
+  padding-right: 15px;
+}
+
+.form-selection__item  input {
+  margin-bottom: 20px;
+  padding-left: 19px;
+ 
+  @include size(100%, 50px);
+
+  border: 1px solid $input-color;
+}
+
+.form-selection__item p:last-child input {
+  margin-bottom: 0;
+}
+
+.form-selection__item p:last-child label {
+  padding-bottom: 0;
+}
+
+.form-selection__item-categories {
+  padding-top: 19px;
+  padding-bottom: 15px;
+  padding-left: 27px;
+
+  width: 570px;
+
+  border: 1px solid $border-lighter;
+}
+
+.form-selection__item-categories p:active {
+  opacity: 0.3;
+}
+
+.form-selection__item-categories input{
+  display: none;
+}
+
+.form-selection__item-categories label {
+  display: block;
+}
+
+.form-selection__item-categories input + label {
+  margin-bottom: 13px;
+}
+
+.form-selection__item-categories input + label::before {
+  content: "";
+  display: inline-block;
+
+  @include size(38px, 38px);
+  margin-right: 20px;
+  vertical-align: middle;
+  border: 10px solid $inner-color;
+  box-shadow: 0 0 0 1px $border-lightex;
+}
+
+.form-selection__item-categories input[type="radio"] + label::before {
+  border-radius: 50%;
+}
+
+.form-selection__item-categories input:checked + label::before  {
+  background-color: $secondary-color;
+}
+
+.form-selection__item input::placeholder {
+  @include fonts(20px, 30px);
+  text-transform: uppercase;
+  color: $text-color;
+  font-family: $mainFont;
+}
+
+
+//Комментарий
+
+
+.form-selection__item-comment {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include size(100%, 174px);
+
+  @include fonts(20px, 30px);
+  color: $text-color;
+  font-family: $mainFont;
+  text-transform: uppercase;
+
+  border: 1px solid $input-color;
+}
+
+//Дополнительно
+
+.form-selection__item-optionally p {
+  position: relative;
+}
+
+.form-selection__item-optionally p:active {
+  opacity: 0.3;
+}
+
+.form-selection__item-optionally input {
+  display: none;
+}
+
+.form-selection__item-optionally label {
+  display: block;
+  vertical-align: middle;
+}
+
+.form-selection__item-optionally input + label::before {
+  content: "";
+
+  display: inline-block;
+
+  @include size(38px, 38px);
+
+  margin-right: 20px;
+  vertical-align: middle;
+  border: 1px solid $input-color;
+  box-shadow: 0 0 0 1px $border-lightex;
+}
+
+
+.form-selection__item-optionally input:checked + label::after  {
+  content: "";
+
+  position: absolute;
+  left: 10px;
+  top: 10px;
+
+  @include size(19px, 10px);
+
+  border-top: transparent;
+  border-bottom: 2px solid $secondary-color;
+  border-left: 2px solid $secondary-color;
+  border-right: transparent;
+
+  transform: rotate(-45deg);
+}
+
+//Кнопка
+
+.submit input {
+  padding: 0;
+  margin: 0;
+
+  height: 52px;
+
+  font-family: inherit;
+  color: $inner-color;
+  background-color: $secondary-color;
+  text-transform: uppercase;
+}
+
+.submit__note {
+  margin-left: 80px;
+
+  @include fonts(16px, 16px);
+
+  color: $text-color;
+  font-family: $secondaryFont;
+  text-transform: none;
+}
+
+.form-selection__flex-container-submit {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-selection__item-phone input {
+  background: url("/assets/img/form-img/phone-icon.svg") no-repeat 97% center;
+  background-size: 20px 20px;
+}
+
+.form-selection__item-email input {
+  background: url("/assets/img/form-img/email-icon.svg") no-repeat 97% center;
+  background-size: 20px 20px;
+}
+
+.form-selection__item  input:focus {
+  border: 2px solid #434343;
+}
+
+
+
+
+
+
+

@@ -28,10 +28,9 @@
   display: flex;
   align-items: center;
 
-  font-size: 16px;
-  line-height: 16px;
-  color: #444444;
-  font-family: "Arial";
+  @include fonts(16px, 16px);
+  color: $text-color;
+  font-family: $secondaryFont;
   text-align: right;
 }
 
