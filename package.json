@@ -19,7 +19,7 @@
     "type": "git"
   },
   "bugs": {
-
+    "url": "https://github.com/vedees/webpack-template/issues"
   },
   "keywords": [
     "webpack",
